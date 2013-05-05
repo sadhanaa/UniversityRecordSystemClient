@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>UniversityRecordsSystemClient</display-name>
+	<welcome-file-list>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/View/Error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/View/Error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/View/Error.jsp</location>
+	</error-page>
+
+	<servlet>
+		<servlet-name>Error</servlet-name>
+		<jsp-file>/View/Error.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Error</servlet-name>
+		<url-pattern>/Error.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReturnMovieServlet</servlet-name>
+		<servlet-class>servlets.ReturnMovie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReturnMovieServlet</servlet-name>
+		<url-pattern>/View/ReturnMovieServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReturnMovie</servlet-name>
+		<jsp-file>/View/ReturnMovie.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReturnMovie</servlet-name>
+		<url-pattern>/View/ReturnMovie</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewAccount</servlet-name>
+		<jsp-file>/View/ViewAccount.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAccount</servlet-name>
+		<url-pattern>/View/ViewAccount</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewMonthlyBill</servlet-name>
+		<jsp-file>/View/ViewMonthlyBill.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewMonthlyBill</servlet-name>
+		<url-pattern>/View/ViewMonthlyBill</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateUserInfo</servlet-name>
+		<jsp-file>/View/UpdateUserInfo.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateUserInfo</servlet-name>
+		<url-pattern>/View/UpdateUserInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdatePasswordInfo</servlet-name>
+		<jsp-file>/View/UpdatePasswordInfo.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdatePasswordInfo</servlet-name>
+		<url-pattern>/View/UpdatePasswordInfo</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>UpdateUserInfoServlet</description>
+		<display-name>UpdateUserInfoServlet</display-name>
+		<servlet-name>UpdateUserInfoServlet</servlet-name>
+		<servlet-class>servlets.UpdateUserInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateUserInfoServlet</servlet-name>
+		<url-pattern>/View/UpdateUserInfoServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>UpdatePasswordInfoServlet</description>
+		<display-name>UpdatePasswordInfoServlet</display-name>
+		<servlet-name>UpdatePasswordInfoServlet</servlet-name>
+		<servlet-class>servlets.UpdatePasswordInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdatePasswordInfoServlet</servlet-name>
+		<url-pattern>/View/UpdatePasswordInfoServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewMovies</servlet-name>
+		<jsp-file>/View/ViewMovies.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewMovies</servlet-name>
+		<url-pattern>/View/ViewMovies</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ViewMoviesServlet</servlet-name>
+		<servlet-class>servlets.ViewMovies</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewMoviesServlet</servlet-name>
+		<url-pattern>/View/ViewMoviesServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MakeMonthlyPaymentServlet</servlet-name>
+		<servlet-class>servlets.MakeMonthlyPayment</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MakeMonthlyPaymentServlet</servlet-name>
+		<url-pattern>/View/MakeMonthlyPaymentServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MakeMonthlyPayment</servlet-name>
+		<jsp-file>/View/MakeMonthlyPayment.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MakeMonthlyPayment</servlet-name>
+		<url-pattern>/View/MakeMonthlyPayment</url-pattern>
+	</servlet-mapping>
+
+	<!-- SignIn Pages -->
+
+	<servlet>
+		<display-name>SignInUser</display-name>
+		<servlet-name>SignInUser</servlet-name>
+		<jsp-file>/View/SignInUser.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignInUser</servlet-name>
+		<url-pattern>/View/SignInUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SignInUser</servlet-name>
+		<url-pattern>/View/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>SignInUserServlet</display-name>
+		<servlet-name>SignInUserServlet</servlet-name>
+		<servlet-class>servlets.SignInUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignInUserServlet</servlet-name>
+		<url-pattern>/View/SignInUserServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Signup Pages -->
+	<servlet>
+		<display-name>SignUpUser</display-name>
+		<servlet-name>SignUpUser</servlet-name>
+		<jsp-file>/View/SignUpUser.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUpUser</servlet-name>
+		<url-pattern>/View/SignUpUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<display-name>SignUpUserServlet</display-name>
+		<servlet-name>SignUpUserServlet</servlet-name>
+		<servlet-class>servlets.SignUpUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUpUserServlet</servlet-name>
+		<url-pattern>/View/SignUpUserServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HomePage</servlet-name>
+		<jsp-file>/View/HomePage.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomePage</servlet-name>
+		<url-pattern>/View/HomePage</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HomePageServlet</servlet-name>
+		<servlet-class>servlets.HomePage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomePageServlet</servlet-name>
+		<url-pattern>/View/HomePageServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Admin Servlets -->
+
+	<servlet>
+		<servlet-name>CreateMovie</servlet-name>
+		<servlet-class>servlets.CreateMovie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateMovie</servlet-name>
+		<url-pattern>/Admin/CreateMovie</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditAdmin</servlet-name>
+		<servlet-class>servlets.EditAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditAdmin</servlet-name>
+		<url-pattern>/Admin/EditAdmin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditPerson</servlet-name>
+		<servlet-class>servlets.EditPerson</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditPerson</servlet-name>
+		<url-pattern>/Admin/EditPerson</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditCourse</servlet-name>
+		<servlet-class>servlets.EditCourse</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditCourse</servlet-name>
+		<url-pattern>/Admin/EditCourse</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SignInAdmin</servlet-name>
+		<servlet-class>servlets.SignInAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignInAdmin</servlet-name>
+		<url-pattern>/Admin/SignInAdmin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SignUpAdmin</servlet-name>
+		<servlet-class>servlets.SignUpAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUpAdmin</servlet-name>
+		<url-pattern>/Admin/SignUpAdmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SignOutAdmin</servlet-name>
+		<servlet-class>servlets.SignOutAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignOutAdmin</servlet-name>
+		<url-pattern>/Admin/SignOutAdmin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SignOutUserServlet</servlet-name>
+		<servlet-class>servlets.SignOutUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignOutUserServlet</servlet-name>
+		<url-pattern>/View/SignOutUserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ViewMembers</servlet-name>
+		<servlet-class>servlets.ViewMembers</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewMembers</servlet-name>
+		<url-pattern>/Admin/ViewMembers</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ViewMoviesAdmin</servlet-name>
+		<servlet-class>servlets.ViewMovies</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewMoviesAdmin</servlet-name>
+		<url-pattern>/Admin/ViewMovies</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchMember</servlet-name>
+		<servlet-class>servlets.SearchMember</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchMember</servlet-name>
+		<url-pattern>/Admin/SearchMember</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchCourse</servlet-name>
+		<servlet-class>servlets.SearchCourse</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchCourse</servlet-name>
+		<url-pattern>/Admin/SearchCourse</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Admin JSPs -->
+	<servlet>
+		<servlet-name>AdminIndex</servlet-name>
+		<jsp-file>/Admin/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminIndex</servlet-name>
+		<url-pattern>/Admin/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogIn</servlet-name>
+		<jsp-file>/Admin/LogIn.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogIn</servlet-name>
+		<url-pattern>/Admin/LogIn</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<jsp-file>/Admin/Home.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/Admin/Home</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchedCourses</servlet-name>
+		<jsp-file>/View/searchedCourses.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchedCourses</servlet-name>
+		<url-pattern>/View/SearchedCourses</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserIndex</servlet-name>
+		<jsp-file>/View/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserIndex</servlet-name>
+		<url-pattern>/View/</url-pattern>
+	</servlet-mapping>
+
+</web-app>
