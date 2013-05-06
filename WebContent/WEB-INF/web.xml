@@ -363,5 +363,26 @@
 		<servlet-name>UserIndex</servlet-name>
 		<url-pattern>/View/</url-pattern>
 	</servlet-mapping>
+	
+<!-- Ameya Added --> 	
+  <servlet>
+  	<display-name>login</display-name>
+    	<servlet-name>login</servlet-name>
+    	<servlet-class>servlets.Register</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login</servlet-name>
+    	<url-pattern>/View/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    	<display-name>update</display-name>
+    	<servlet-name>update</servlet-name>
+   	<servlet-class>servlets.Update</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    	<servlet-name>update</servlet-name>
+    	<url-pattern>/View/Update</url-pattern>
+  </servlet-mapping>
 
 </web-app>
