@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+<script>
+function faculty()
+{
+  var t1=document.getElementById("t1");
+	var t2=document.getElementById("t2");
+	var t3=document.getElementById("t3");
+	
+	t1.innerHTML+='<div class="form-row"><span class="label">Department *</span><input type="text" name="dept" /></div>';
+	t2.innerHTML+='<div class="form-row"><span class="label">Office Hours *</span><input type="text" name="officehr" /></div>';
+	t3.innerHTML+='<div class="form-row"><span class="label">Location *</span><input type="text" name="loc" /></div>';
+}
+</script>
+</head>
+
+<body>
+<form id="form1" method="post" action="Login">
+	<div class="form-row"><span class="label">UserName *</span><input type="text" name="user" value="UserName"/></div>
+	<div class="form-row"><span class="label">Password *</span><input type="password" name="pass"/></div>
+	<div class="form-row"><span class="label">FirstName *</span><input type="text" name="fname" /></div>
+	<div class="form-row"><span class="label">LastName *</span><input type="text" name="lname" /></div>
+	<div class="form-row"><span class="label">Address (Street, Apt) *</span><input type="text" name="add" /></div>
+	<div class="form-row"><span class="label">City *</span><input type="text" name="city" /></div>
+	<div class="form-row"><span class="label">State *</span><input type="text" name="state" /></div>
+	<div class="form-row"><span class="label">Zipcode *</span><input type="text" name="zip" /></div>
+	<div class="form-row">
+	Faculty <input type="radio" name="facultystudent" value="I" onclick="faculty()"/>
+	Student <input type="radio" name="facultystudent" value="S" />
+	</div>
+	
+	<p id=t1></p>
+	<p id=t2></p>
+	<p id=t3></p>
+	<p id=t4></p>
+	
+	<div class="form-row"><input class="submit" type="submit" value="Submit"></div>	
+</form>
+</body>
+</html>
+
+
+
+<!-- 
+
+Faculty
+String pass, String fname, String lname,
+String address, String city, String state, String zipcode,
+String persontype, String department, String officeHr,
+String location
+-->
+
+
+<!-- 
+Student
+String pass, String fname, String lname,
+String address, String city, String state, String zipcode,
+String persontype
+ -->
